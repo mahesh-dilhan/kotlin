@@ -10,6 +10,13 @@ fun main() {
 
     val items = listOf(1,2,3,4)
     println(items.filter{it % 2==0})
+    println(items.maxBy { it })
+
+    val books : MutableCollection<Book> =
+        mutableListOf(Book(1900,"Davinci Code"),Book(2000,"Beach"),Book(2003,"Shadows of early grey"))
+    println(books.maxBy { it.publish })
+    println(books.minBy { it.publish })
 
 }
+data class Book(val publish:Int, val name:String)
 
